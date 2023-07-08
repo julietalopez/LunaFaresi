@@ -1,0 +1,198 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size:medium;
+}
+
+
+.menu-color{
+    background-color:#5F0F40 ;
+}
+.color-link{
+    color: whitesmoke;
+}
+header{
+    background-color: #5F0F40;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:0;
+    height: 80px;
+
+}
+
+.color-h2{
+    font-size: 18px;
+    color:#5F0F40;
+    padding:10px;
+    font-weight: bold;
+}
+
+.color-h3{
+    font-size: 18px;
+    color:black;
+    margin-left: 0px;
+}
+
+
+header nav ul{
+        list-style:none;
+        color:white;
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap:10px;
+        margin:0;
+        font-weight: bold;
+    }
+
+
+
+
+header nav ul li a{
+text-decoration: none;
+color: white;
+font-weight: bold;
+display:flex;
+margin:0;
+}
+
+main{
+    background-color: beige;
+    margin:0px;
+    padding:0px;
+
+}
+h1{
+    color: #5F0F40;
+    text-align: center;
+    
+}
+h2{
+
+    color:#5F0F40;
+    padding:10px;
+}
+h3{
+    padding:20px;
+}
+
+p{
+    padding:10px;
+}
+
+
+
+footer{
+    background-color: #5F0F40;
+    color:white;
+    margin-top: 10px;
+   text-align: center;
+}
+
+
+footer ul li {
+    list-style: none;
+    color: #FB8B24;
+    
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #FB8B24;
+    align-content: end;
+    
+}
+
+.contenedor{
+    display:grid;
+    grid-template-areas:
+    "algodemi"
+    "servicios"
+    "geminis"
+    "jupiter";
+    grid-template-rows:repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin:3rem 1rem 3rem 1rem;
+
+}
+
+.geminis{
+    grid-area:geminis;
+    background-color: rgb(172, 172, 123);
+
+}
+
+.algodemi{
+    grid-area:algodemi;
+    background-color:  rgb(172, 172, 123);
+}
+
+.servicios{
+    grid-area:servicios;
+    background-color: rgb(172, 172, 123);
+}
+
+.lista{
+    display:flex;
+    font-style: italic;
+    align-items:center;
+    justify-content: center;
+}
+
+.jupiter{
+    grid-area:jupiter;
+    background-color:  rgb(172, 172, 123);
+
+}
+
+/* mq de desktop index*/
+@media screen and (min-width:1024px) {
+
+
+    .contenedor{
+        grid-template-areas:
+        "geminis algodemi"
+        "jupiter servicios";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+
+
+}
+
+/* responsive de soy luna faresi */
+
+.soyluna{
+    display:grid;
+    grid-template-areas:
+    "imagen"
+    "descripcion";
+    grid-template-rows:repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin:0;
+}
+
+.imagen{
+    grid-area:imagen;
+}
+.descripcion{
+    grid-area: descripcion;
+}
+@media screen and (min-width:1024px) {
+
+
+    .soyluna{
+        grid-template-areas:
+        "imagen descripcion";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        align-items: center;
+    }
+
+
+}
